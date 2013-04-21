@@ -130,7 +130,7 @@ void EIO_Open(uv_work_t* req) {
 
   //all process to receive SIGIO
   fcntl(fd, F_SETOWN, getpid());
-  fcntl(fd, F_SETFL, FASYNC);
+
 
   // Set baud and other configuration.
   tcgetattr(fd, &options);
